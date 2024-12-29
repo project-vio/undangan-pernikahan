@@ -1,0 +1,618 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding </title>
+    <meta name="description" content="">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        
+.count-down-area {
+    margin-bottom: 20px; /* Adjust this value to control space between the countdown and map */
+}
+
+.map-card {
+    margin-top: 10px; /* Adjust this value as needed */
+}
+        
+        /* Default Font Size */
+.title {
+    font-size: 35px;
+}
+
+.description {
+    font-size: 15px;
+}
+
+    /* Menurunkan ukuran gambar title */
+    .section-tittle img {
+        width: 50%; /* Atur gambar supaya lebih kecil di layar kecil */
+    }
+}
+
+/* Media Queries untuk Layar Sedang */
+@media (max-width: 768px) {
+    .title {
+        font-size: 30px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .card-top span, .card-bottom i {
+        font-size: 20px;
+    }
+}
+
+        
+.card-background {
+    background-size: cover; /* Gambar menutupi area */
+    background-position: top; /* Hanya bagian atas gambar yang terlihat */
+    background-repeat: no-repeat;
+    position: relative;
+    color: black;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.09); Overlay transparan di atas gambar */
+    z-index: 1;
+}
+
+.single-card {
+    position: relative;
+    z-index: 2;
+    /* background-color: rgba(0, 0, 0, 0.6); Latar belakang gelap untuk teks */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.single-card h4, 
+.single-card ul, 
+.single-card li, 
+.single-card a {
+    color: black !important; /* Teks tetap putih untuk kontras */
+}
+
+.single-card ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.card-top span, .card-buttons a {
+    color: black !important;
+}
+
+.card-top {
+    margin-bottom: 15px;
+}
+
+.card-bottom {
+    background-color: rgba(0, 0, 0, 0.01); /* Latar belakang khusus untuk teks dalam card */
+    border-radius: 5px;
+}
+
+
+.single-card {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.3); /* Transparansi tambahan untuk teks */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.single-card h4, .single-card ul, .single-card li, .single-card a {
+    color: white !important; /* Pastikan semua teks berwarna putih */
+}
+
+.card-top span, .card-buttons a {
+    color: white !important; /* Warna putih untuk ikon dan tombol */
+}
+
+
+.single-card {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.8); /* Card transparansi */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+        .single-counter p {
+    font-size: 1rem;
+    margin: 0;
+    text-transform: uppercase; /* Optional: Make text uppercase for better readability */
+    color: #fff; /* Optional: Ensure the text is visible against the background */
+}
+
+        .single-counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.count-down-wrapper {
+    padding: 20px;
+    background: url('assets/img/gallery/section_bg2.png') no-repeat center center/cover;
+}
+
+        .story-detail {
+            text-align: center;
+        }
+        .story-detail p{
+            font-size: 18x;
+        }
+        .story-detail h5{
+            font-size: 20px;
+        }
+        .story-detail h4{
+            font-size: 22px;
+        }
+        .story-detail h2{
+            font-size: 26px;
+        }
+        img {
+    max-width: 100%;
+    height: auto;
+}
+        .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    flex: 1 1 100%; /* Item akan mengambil 100% lebar pada perangkat kecil */
+}
+
+@media (min-width: 600px) {
+    .item {
+        flex: 1 1 50%; /* Item akan mengambil 50% lebar pada perangkat lebih besar */
+    }
+}
+
+/* Gaya untuk perangkat mobile */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+        @font-face {
+  font-family: 'Amiri';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/amiri/v17/J7aRnpd8CGxBHpUrtLMA7w.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+.gallery-area {
+    display: flex;
+    justify-content: center; /* Mengatur konten di tengah secara horizontal */
+}
+
+.single-gallery {
+    display: flex;
+    flex-direction: column; /* Mengatur konten dalam kolom */
+    align-items: center; /* Mengatur konten di tengah secara vertikal */
+}
+
+.gallery-img {
+    width: 100%; /* Atur lebar gambar sesuai dengan kolom */
+    height: 200px; /* Atur tinggi gambar sesuai kebutuhan */
+    background-size: cover; /* Pastikan gambar menutupi area */
+    background-position: center; /* Posisikan gambar di tengah */
+}
+
+.arab{
+font-size: 30px;
+line-height: 48px;
+font-family: "Amiri","Traditional Arabic",Tahoma,sans-serif;
+font-weight: normal;
+text-align: right;
+direction: rtl;
+
+
+
+}
+
+html, body {
+    height: 100%; /* Pastikan html dan body memiliki tinggi 100% */
+    margin: 0; /* Menghapus margin default */
+}
+
+.map-card {
+    display: flex;
+    justify-content: center; /* Mengatur konten di tengah secara horizontal */
+    align-items: center; /* Mengatur konten di tengah secara vertikal */
+    width: 100%; /* Mengatur lebar maksimum */
+    height: 100vh; /* Mengatur tinggi maksimum sesuai viewport */
+    overflow: hidden; /* Menyembunyikan overflow jika ada */
+}
+
+.map-card iframe {
+    width: 100%; /* Mengatur lebar iframe sesuai dengan lebar kontainer */
+    height: 50%; /* Mengatur tinggi iframe sesuai dengan tinggi kontainer */
+}
+
+    </style>
+
+<!-- script -->
+<script>
+
+    // Set the target date and time
+    const targetDate = new Date("2025-01-31T07:59:59").getTime();
+
+    // Update the countdown every second
+    const countdown = setInterval(() => {
+        const now = new Date().getTime();
+        const timeRemaining = targetDate - now;
+
+        if (timeRemaining > 0) {
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            document.getElementById("days").textContent = days;
+            document.getElementById("hours").textContent = hours;
+            document.getElementById("minutes").textContent = minutes;
+            document.getElementById("seconds").textContent = seconds;
+        } else {
+            clearInterval(countdown);
+            document.querySelector(".count-down-area").innerHTML = "<p>Countdown completed!</p>";
+        }
+    }, 1000);
+</script>
+  
+
+</head>
+<body>
+    <audio id="background-audio" autoplay loop mute style="display: none;">
+        <source src="/bd.mp" type="audio/mpeg">
+    </audio>
+    
+<!-- Preloader Start -->
+<div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="preloader-circle"></div>
+            <div class="preloader-img pere-text">
+               <img src="assets/img/logo/logo.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Preloader Start -->
+<header>
+    <!-- Header Start -->
+    <div class="header-area ">
+            <div class="main-header header-sticky">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- Header End -->
+</header>
+
+<main>
+    <!--? Slider Area Start-->
+    <div class="slider-area" style="margin-left: 0; width: 30rem;">
+        <div class="slider-active">
+            <!-- Single Slider -->
+            <div class="single-slider slider-height hero-overly d-flex align-items-center">
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-xl-8 col-lg-6 col-md-8 ">
+                            <div class="hero__caption">
+                                <span data-animation="fadeInLeft" data-delay=".3s">january 31</span>
+                                <h1 data-animation="fadeInLeft" data-delay=".5s" data-duration="2000ms">Zain<strong> & </strong> Faiz</h1>
+                                <p data-animation="fadeInLeft" data-delay=".9s">will get married</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Slider Area End-->
+    <div class="spacer" style="height: 100px;"></div>
+    <!--? Our Story Start -->
+    <div  class="Our-story-area " style="margin-left: 75px;">
+        <div class="container">
+            <!-- Section Tittle -->
+            <div class="row d-flex justify-content-center">
+                <div class="col-xl-7 col-lg-8">
+                    <div class="section-tittle text-center mb-70">
+                        <h2>Our Love Story​</h2>
+                        <img src="assets/img/gallery/tittle_img.png" alt="">
+                        <p class="arab">
+
+                            وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةًۗ اِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ </p>
+                        <p style="font-size: 20px;">Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang.
+                        Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir. <br>Ar-Rum · Ayat 21</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <!-- Baris 1 -->
+                <div class="row justify-content-center mb-4">
+                    <div class="col-lg-5">
+                        <div class="story-caption background-img" style="background-image: url('assets/img/gallery/gallery02.jpg'); background-size: cover; background-position: center; min-height: 300px;">
+                            <div class="story-detail d-flex align-items-center justify-content-center text-center text-white" style="height: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Baris 2 -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-5">
+                        <div class="spacer" style="height: 30px;"></div>
+                        <div class="story-caption background-img" style="background-image: url('assets/img/gallery/story2.png'); background-size: cover; background-position: center; min-height: 300px;">
+                            <div class="story-detail text-center text-white p-3">
+                                <div class="spacer" style="height: 500px;"></div>
+                                <h2>Mempelai Pria</h2>
+                                <h4>Muhammad Zainullah, S.Pd</h4>
+                                <h5>Putra Pertama Dari Pasangan:</h5>
+                                <h4>Bapak Haris Jauhari, S.Ag</h4>
+                                <h4>Ibu Siti Nur Mas'adah, S.Pd.I</h4>
+                                <p>Bertempat Tinggal di Desa Brani Wetan, Kecamatan Maron, Kabupaten Probolinggo</p>
+                                <br>
+                                <h4>&</h4>
+                                <br>
+                                <h2>Mempelai Wanita</h2>
+                                <h4>Faizatul Qudriyah, S.Pd</h4>
+                                <h5>Putri Tunggal Dari Pasangan:</h5>
+                                <h4>Bapak Atijan</h4>
+                                <h4>Ibu Hatija</h4>
+                                <p>Bertempat Tinggal di Desa Sidodadi, Kecamatan Paiton, Kabupaten Probolinggo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    
+        </div>
+    </div>
+    <!-- Our Story End -->
+    <div class="spacer" style="height: 450px;"></div>
+
+<!-- Wedding Info Section Start -->
+<section class="pricing-card-area section-bg" style="margin-left: 75px;" data-background="assets/img/gallery/section_bg1.png">
+    <div class="container">
+        <!-- Section Title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="section-tittle text-center mb-70">
+                    <h2 class="fs-3 title">Wedding Info</h2>
+                    <img src="assets/img/gallery/tittle_img.png" alt="">
+                    <p class="fs-6 description">
+                        Merupakan kebahagiaan dan kehormatan bagi kami apabila Bapak/Ibu/Saudara/i dapat hadir dan memberikan doa restu kepada kami dalam momen bahagia ini.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Cards Row -->
+        <div class="row d-flex justify-content-center flex-wrap">
+            <!-- Akad Nikah Card -->
+            <div class="col-12 col-md-6 col-sm-6 mb-3">
+                <div class="single-card text-center mb-30 card-background" style="background-image: url('/assets/img/gallery/gallery06.png');">
+                    <div class="card-top">
+                        <span class="flaticon-chart"></span>
+                        <h4>Akad Nikah</h4>
+                    </div>
+                    <div class="card-bottom">
+                        <ul>
+                            <li><i class="fas fa-calendar-alt"></i> January 31, 2025</li>
+                            <li><i class="far fa-clock"></i> 08:00 - 09:00</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Selatan Masjid Libatul Mukminin, Dusun Kaliayar 3, Sidodadi, Kec. Paiton</li>
+                            <li>Kabupaten Probolinggo, Jawa Timur 67291</li>
+                            <li>
+                                <a href="#" title="View map location">
+                                    <i class="far fa-map"></i> Check out the map
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-buttons mt-30">
+                        <a href="https://maps.app.goo.gl/5aU5z21nYCNu3jSN8" class="btn card-btn1" target="_blank"">Get Started</a>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Resepsi Card -->
+            <div class="col-12 col-md-6 col-sm-6 mb-3">
+                <div class="single-card text-center mb-30 card-background" style="background-image: url('/assets/img/gallery/gallery06.png');">
+                    <div class="card-top">
+                        <span class="flaticon-project"></span>
+                        <h4>Resepsi</h4>
+                    </div>
+                    <div class="card-bottom">
+                        <ul>
+                            <li><i class="fas fa-calendar-alt"></i> January 31, 2025</li>
+                            <li><i class="far fa-clock"></i> 14:00 - Selesai</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Selatan Masjid Libatul Mukminin, Dusun Kaliayar 3, Sidodadi, Kec. Paiton</li>
+                            <li>Kabupaten Probolinggo, Jawa Timur 67291</li>
+                            <li>
+                                <a href="#" title="View map location">
+                                    <i class="far fa-map"></i> Check out the map
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-buttons mt-30">
+                        <a href="https://maps.app.goo.gl/5aU5z21nYCNu3jSN8" class="btn card-btn1" target="_blank"">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Wedding Info Section End -->
+
+<!-- Count Down Section Start -->
+<div class="count-down-area" style="margin-left: 25px;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 col-md-12">
+                <div class="count-down-wrapper text-center" data-background="assets/img/gallery/section_bg2.png">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="single-counter">
+                            <span class="counter" id="days">0</span>
+                            <p>days</p>
+                        </div>
+                        <div class="single-counter mx-3">
+                            <span class="counter" id="hours">0</span>
+                            <p>hours</p>
+                        </div>
+                        <div class="single-counter mx-3">
+                            <span class="counter" id="minutes">0</span>
+                            <p>mins</p>
+                        </div>
+                        <div class="single-counter">
+                            <span class="counter" id="seconds">0</span>
+                            <p>secs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Count Down Section End -->
+
+         
+
+</main>
+<footer>
+    <!-- Footer Start-->
+    <div class="footer-main" data-background="assets/img/gallery/section_bg4.png" style="width: 30rem;">
+        <div class="footer-area footer-padding">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-2  col-lg-3 col-md-5 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="single-footer-caption mb-30">
+                                <!-- logo -->
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2  col-lg-3 col-md-5 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>LOCATION</h4>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d226.0687257278999!2d113.48516930458442!3d-7.734679485355321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sen!2sid!4v1735404460353!5m2!1sen!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <ul>
+                                    <li><a href="#">google map</a></li>
+                                    <li> Selatan Masjid Libatul Mukminin, Dusun Kaliayar 3, Sidodadi, Kec. Paiton</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-bottom area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-xl-12 ">
+                                <div class="footer-copy-right text-center">
+                                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Abdul Rahman Hafidz</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End-->
+</footer>
+
+    <!-- JS here -->
+
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <!-- Date Picker -->
+    <script src="./assets/js/gijgo.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+
+    <!-- Scrollup, nice-select, sticky -->
+    <script src="./assets/js/jquery.scrollUp.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+
+    <!-- counter , waypoint -->
+    <script src="./assets/js/jquery.counterup.min.js"></script>
+    <script src="./assets/js/waypoints.min.js"></script>
+
+    <!-- contact js -->
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+
+    <!-- Jquery Plugins, main Jquery -->	
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+    
+</body>
+</html>
